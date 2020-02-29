@@ -18,17 +18,5 @@ pipeline {
 				  
     }
         
-    stage('Publish Docker Image to Artifactory') {
-        agent any
-            steps {
-  catchError {
-                  
-                   sh "cp ~/.npmrc ."
-                 sh "timestamp=\$(date +'%Y%m%d%H%M%S') && docker build -t integrations/msteams:\$timestamp . && docker tag integrations/msteams:\$timestamp registry.achievers.cloud/achievers-connect/integrations/msteams:latest && docker tag integrations/msteams:\$timestamp registry.achievers.cloud/achievers-connect/integrations/msteams:\$timestamp && docker push registry.achievers.cloud/achievers-connect/integrations/msteams:latest && docker push regis......
-                   
-                }
-                }
-    
-    } 
   }
 }
