@@ -4,7 +4,7 @@ pipeline {
   tools {nodejs "node"}
     
   stages {
-    stage('Running Unit  tests') {
+    stage('Running Unit     tests') 
         agent any
             steps {
                     sh "npm run test"
@@ -17,5 +17,5 @@ pipeline {
                   }
 				  
     }
-       =======
+       
   }}
